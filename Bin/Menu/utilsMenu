@@ -1,0 +1,17 @@
+#!/bin/sh 
+
+choice=$(printf "󰨇 Process Monitor\n󱠂 Utilities" | rofi -dmenu -p "")
+
+case "$choice" in
+    "󰨇 Process Monitor")
+       kitty -T "floatterminal" -e btop
+        ;;
+    "󱠂 Utilities")
+        kitty --hold -e fastfetch
+        hyprctl dispatch movecursor 2182 400
+        kitty -e htop
+        hyprctl dispatch movecursor 2224 1133
+        kitty  -e cmatrix
+        ;;
+    *)
+esac

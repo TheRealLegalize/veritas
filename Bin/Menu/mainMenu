@@ -1,0 +1,16 @@
+#!/bin/sh 
+
+choice=$(printf " Apps\n Settings\n󱠂 Utilities" | rofi -dmenu -p "")
+
+case "$choice" in
+    " Apps")
+        sh ~/bin/Menu/appsMenu
+        ;;
+    " Settings")
+        sh ~/bin/Menu/settingsMenu 
+        ;;
+    "󱠂 Utilities")
+        sh ~/bin/Menu/utilsMenu 
+        ;;
+    *)
+esac

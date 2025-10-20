@@ -1,0 +1,107 @@
+# dunstrc - Catppuccin Macchiato Sapphire Theme
+# Includes app name, app icon, and message text in notifications.
+
+[global]
+    ### Display Settings ###
+    monitor = 0  # Display on primary monitor (change if needed)
+    follow = mouse  # Follow mouse cursor
+    indicate_hidden = yes  # Show hidden notifications count
+
+    ### Geometry ###
+    width = (0, 500)             # Минимальная ширина 0, максимальная 500
+    height = (0, 300)            # Минимальная высота 0, максимальная 300
+#    allow_markup = yes           # Разрешить форматирование (если нужно)
+    origin = top-right  # Position: top-right corner
+    offset = (10, 40)  # Offset from screen edge (x,y)
+    scale = 1  # Auto-scale for DPI
+
+    ### Appearance ###
+    transparency = 10  # Slight transparency for a modern look
+    padding = 12  # Inner padding
+    horizontal_padding = 12
+    frame_width = 2  # Border thickness
+    frame_color = "#7dc4e4"  # Sapphire accent for all frames
+    separator_color = frame  # Separator matches frame (Sapphire)
+    separator_height = 2
+    corner_radius = 0  # Rounded corners for a soft feel
+
+    ### Text ###
+    font = Monospace 10  # Change to your preferred font/size (e.g., "Iosevka 11")
+    line_height = 0
+    markup = full  # Enable Pango markup for colored app name
+    format = "<span foreground='#7dc4e4'>%a</span>\n<b>%s</b>\n%b"  # App name (Sapphire), bold summary, body message
+    alignment = left
+    vertical_alignment = center
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    ### Icons ###
+    icon_position = left  # Show app icon on the left
+    min_icon_size = 32  # Minimum icon size
+    max_icon_size = 64  # Maximum icon size (scales to fit)
+    icon_path = /usr/share/icons/Papirus/:/usr/share/icons/hicolor/:/usr/share/pixmaps/  # Common paths; add Catppuccin-themed icons if available
+
+    ### Behavior ###
+    sort = yes  # Sort by urgency
+#    startup_notification = false
+    dmenu = /usr/bin/dmenu -p dunst:  # For notification actions
+    browser = /usr/bin/xdg-open  # For opening URLs
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    force_xwayland = false  # For Wayland compatibility (if needed)
+
+    ### Progress Bars ###
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 8
+
+    ### Mouse Actions ###
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+# Low Urgency (Subtle notifications, e.g., info messages)
+[urgency_low]
+#    backrground = "#494d64"  # Surface1 (muted gray)
+    foreground = "#b8c0e0"  # Subtext1 (light gray text)
+    frame_color = "#7dc4e4"  # Sapphire border
+    timeout = 5  # Dismiss after 5 seconds
+
+# Normal Urgency (Standard notifications)
+[urgency_normal]
+    background = "#24273a"  # Base (dark background)
+    foreground = "#cad3f5"  # Text (main foreground)
+    frame_color = "#7dc4e4"  # Sapphire border
+    timeout = 10  # Dismiss after 10 seconds
+    highlight = "#7dc4e4"  # Sapphire for progress bars/highlights
+
+# Critical Urgency (Important alerts, e.g., errors)
+[urgency_critical]
+    background = "#363a4f"  # Surface0 (slightly lighter for attention)
+    foreground = "#cad3f5"  # Text (main foreground)
+    frame_color = "#ed8796"  # Red for critical border (overrides Sapphire for urgency)
+    timeout = 0  # Never auto-dismiss
+    highlight = "#ed8796"  # Red for progress bars/highlights
+
+# Shortcuts (for testing or custom rules)
+#[shortcuts]
+#    close = ctrl+space
+#    close_all = ctrl+shift+space
+#    history = ctrl+grave
+#    context = ctrl+shift+period
+
+# Example Rule: Override for a specific app (e.g., volume notifications with custom format)
+[volume]
+    summary = "Volume"
+    background = "#1e2030"  # Mantle
+    foreground = "#cad3f5"  # Text
+    frame_color = "#7dc4e4"  # Sapphire
+    timeout = 2

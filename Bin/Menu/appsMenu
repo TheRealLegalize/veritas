@@ -1,0 +1,16 @@
+#!/bin/sh 
+
+choice=$(printf "󰏕 Install\n󰏔 Uninstall\n󰏓 Purge" | rofi -dmenu -p "")
+
+case "$choice" in
+    "󰏕 Install")
+        kitty -T "floatterminal" -e sh ~/bin/Menu/pkgInstall
+        ;;
+    "󰏔 Uninstall")
+        kitty -T "floatterminal" -e sh ~/bin/Menu/pkgRemove 
+        ;;
+    "󰏓 Purge")
+        kitty -T "floatterminal" -e sh ~/bin/Menu/pkgPurge 
+        ;;
+    *)
+esac

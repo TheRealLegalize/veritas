@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ask=$(rofi -dmenu -p "" -config ~/.config/rofi/input.rasi)
+
+echo $ask

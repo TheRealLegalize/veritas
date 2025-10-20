@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1754824934761503-1</unique-id>
+	<command>kitty --directory %f -T &quot;floatterminal&quot;</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>image-png</icon>
+	<name>To png</name>
+	<submenu></submenu>
+	<unique-id>1758556978787238-1</unique-id>
+	<command>ffmpeg -i %n %n.png</command>
+	<description>Image to png</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>folder-black</icon>
+	<name>Open as root</name>
+	<submenu></submenu>
+	<unique-id>1755932512508825-1</unique-id>
+	<command>thunar admin://%f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>3depict</icon>
+	<name>Copy Path</name>
+	<submenu></submenu>
+	<unique-id>1759350969232680-1</unique-id>
+	<command>echo %f | wl-copy</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>

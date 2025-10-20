@@ -1,0 +1,77 @@
+[global]
+    # Шрифт и размер
+    font = JetBrainsMono Nerd Font 14  
+    # Формат уведомления: иконка, заголовок, содержимое
+    format = "<b>%s</b>\n%b"  # %s - заголовок, %b - тело, %I - иконка (raw)
+    sort = yes
+    indicate_hidden = yes
+    enable_recursive_icon_lookup = true
+
+
+    width = (50, 500)
+    height = (30, 300)
+
+    # Положение на экране  
+    origin = top-center
+    offset = (0,20)
+
+    # Прозрачность и отступы
+    transparency = 0   
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 12
+    frame_width = 2  
+    separator_height = 0
+    corner_radius = 0  
+
+    # Цвета Catppuccin Mocha (фон полупрозрачный с альфа #CC)
+    background = "#1e1e2eCC"  # base с прозрачностью
+    foreground = "#cdd6f4"     # text
+    frame_color = "#74c7ec"    # mauve для границы
+
+    # Другие настройки для красоты
+    separator_color = frame
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = true
+    show_indicators = yes
+
+    # Иконки
+    min_icon_size = 32
+    max_icon_size = 64
+
+    # Таймауты
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/xdg-open
+    timeout = 2
+    idle_threshold = 120
+    monitor = 0
+    follow = none
+    sticky_history = yes
+    history_length = 20
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    startup_notification = false
+    force_xinerama = false
+
+# Правила для urgency (критичность)
+#[urgency_low]
+#    background = "#1e1e2eCC"
+#    foreground = "#cdd6f4"
+#    frame_color = "#a6e3a1" 
+#
+#[urgency_normal]
+#    background = "#1e1e2eCC"
+#    foreground = "#cdd6f4"
+#    frame_color = "#fab387" 
+#
+#[urgency_critical]
+#    background = "#1e1e2eCC"
+#    foreground = "#cdd6f4"
+#    frame_color = "#f38ba8" 

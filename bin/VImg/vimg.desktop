@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Veritas Image Viewer
+Comment=Просмотр изображений с автоподгонкой под размер окна
+Exec=vimg %f
+TryExec=vimg
+Terminal=false
+Categories=Graphics;Viewer;
+Icon=image-viewer
+MimeType=image/jpeg;image/png;image/gif;image/webp;image/bmp;image/tiff;

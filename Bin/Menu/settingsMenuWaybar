@@ -1,0 +1,13 @@
+#!/bin/sh 
+
+choice=$(printf " Config\n Style" | rofi -dmenu -p "")
+
+case "$choice" in
+    " Config")
+        kitty -e nvim ~/.config/waybar/config.jsonc
+        ;;
+    " Style")
+        kitty -e nvim ~/.config/waybar/style.css
+        ;;
+    *)
+esac

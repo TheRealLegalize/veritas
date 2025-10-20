@@ -1,0 +1,79 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "source": "$HOME/bin/Img/Icons/ArchChan.png",
+        "width": 25,
+        "height": 12
+         /*       "color": {
+            "1": "#89b4fa",  // blue
+            "2": "#b4befe"   // lavender
+        }*/
+    },
+    "display": {
+        "separator": "  ",
+        "color": {
+            "keys": "#cba6f7",     // mauve
+            "title": "#f5e0dc",    // rosewater
+            "separator": "#6c7086" // overlay0
+        },
+        "brightColor": true
+    },
+    "modules": [
+        {
+            "type": "title",
+            "key": "",
+            "keyColor": "#f2cdcd",  // flamingo
+            "format": "{user-name}@{host-name}"
+        },
+        {
+            "type": "os",
+            "key": "",  // Кастомная иконка для OS
+            "keyColor": "#89b4fa"  // blue
+        },
+        {
+            "type": "kernel",
+            "key": "",  // Кастомная иконка для kernel
+            "keyColor": "#a6e3a1"  // green
+        },
+        {
+            "type": "uptime",
+            "key": "",  // Кастомная иконка для uptime
+            "keyColor": "#f9e2af"  // yellow
+        },
+        {
+            "type": "packages",
+            "key": "󰮯",  // Кастомная иконка для packages
+            "keyColor": "#fab387"  // peach
+        },
+        {
+            "type": "shell",
+            "key": "",  // Кастомная иконка для shell
+            "keyColor": "#94e2d5"  // teal
+        },
+        {
+            "type": "cpu",
+            "key": "",  // Кастомная иконка для CPU
+            "keyColor": "#f38ba8"  // red
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮",  // Кастомная иконка для GPU
+            "keyColor": "#f5c2e7"  // pink
+        },
+        {
+            "type": "memory",
+            "key": "",  // Кастомная иконка для memory
+            "keyColor": "#74c7ec"  // sapphire
+        },
+        {
+            "type": "disk",
+            "key": "",  // Кастомная иконка для disk
+            "keyColor": "#89dceb"  // sky
+        },
+        {
+            "type": "colors",
+            "symbol": "circle"
+        }
+    ]
+}

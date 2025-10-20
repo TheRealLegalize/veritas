@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kitty --hold -T "fetch" -e fastfetch; hyprctl dispatch movecursor 2182 400; kitty -T "htop" -e htop; hyprctl dispatch movecursor 2224 1133; kitty -T "cmatrix" -e cmatrix;

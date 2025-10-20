@@ -1,0 +1,123 @@
+/* Catppuccin Mocha colors */
+@define-color rosewater         #f5e0dc;
+@define-color flamingo          #f2cdcd;
+@define-color pink              #f5c2e7;
+@define-color mauve             #cba6f7;
+@define-color red               #f38ba8;
+@define-color maroon            #eba0ac;
+@define-color peach             #fab387;
+@define-color yellow            #f9e2af;
+@define-color green             #a6e3a1;
+@define-color teal              #94e2d5;
+@define-color sky               #89dceb;
+@define-color sapphire          #74c7ec;
+@define-color blue              #89b4fa;
+@define-color lavender          #b4befe;
+@define-color text              #cdd6f4;
+@define-color base              #1e1e2e;
+@define-color mantle            #181825;
+@define-color crust             #11111b;
+@define-color surface0          #313244;
+@define-color surface1          #45475a;
+@define-color surface2          #585b70;
+@define-color overlay0          #6c7086;
+@define-color overlay1          #7f849c;
+@define-color overlay2          #9399b2;
+@define-color subtext0          #a6adc8;
+@define-color subtext1          #bac2de;
+
+/* Global styles */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14pt;
+    min-height: 0;
+    transition: none;
+}
+
+window#waybar {
+    background: @mantle;
+    color: @text;
+}
+
+tooltip {
+    border: 2px solid @sapphire;
+    border-radius: 0;
+    background: @mantle;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: @text;
+}
+
+#workspaces button.active {
+    color: @sapphire;
+    border-bottom: 2px solid @sapphire;
+}
+
+#clock {
+    padding: 0 5px;
+    color: @rosewater;
+}
+
+#cpu {
+    padding: 0 5px;
+    color: @red;
+}
+
+#memory {
+    padding: 0 5px;
+    color: @sapphire;
+}
+
+
+#custom-colorpicker {
+    padding: 0 0px 0 0;
+    margin: 0px 10px 0px 0px;
+    color: @teal;
+}
+
+#network {
+    padding: 0 5px;
+    color: @blue;
+}
+
+#backlight {
+    padding: 0 5px;
+    color: @yellow;
+}
+
+#pulseaudio {
+    padding: 0 5px;
+    color: @green;
+}
+
+#battery {
+    padding: 0 5px;
+    color: @peach;
+}
+
+#language {
+    padding: 0 5px;
+    color: @sapphire;
+}
+
+#custom-powermenu {
+    padding: 0 12px 0 2px;
+    margin: 0 0px 0 5px;
+    color: @red;
+}
+
+#tray {
+    padding: 0 5px;
+}
+
+#tray menu {
+    background: @mantle;
+    color: @text;
+    border-radius: 0;
+    border: 2px solid @sapphire;
+}
