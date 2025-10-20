@@ -5,8 +5,8 @@ from getpass import getpass
 def rgb(text, r, g, b):
     return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
 # Не редактировать/Do not edit
-autologin = "34c\ExecStart=-/sbin/agetty --noreset --autologin " + {user} + " --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - ${TERM}"
 user = os.getlogin()
+autologin = "34c\ExecStart=-/sbin/agetty --noreset --autologin " + {user} + " --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - ${TERM}"
 start = rgb("Press ", 205, 214, 244) + rgb("ENTER", 116, 199, 236) + rgb(" to start.", 205, 214, 244)
 base = ""
 aur = ""
