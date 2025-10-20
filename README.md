@@ -26,7 +26,8 @@
 <br>
 
 Install Archlinux, setup the user, clone this repository with command:
-```git clone https://github.com/TheRealLegalize/veritas.git```
+```shell
+git clone https://github.com/TheRealLegalize/veritas.git```
 
 Move to cloned repository:
 ```shell
