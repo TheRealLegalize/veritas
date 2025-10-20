@@ -25,7 +25,8 @@
 <h1 align="left"> :blue_book: Installation</h1> 
 <br>
 
-Install an basic archlinux, after installation clone this repository.
+Install Archlinux, setup the user, clone this repository with command:
+```git clone https://github.com/TheRealLegalize/veritas.git```
 
 Move to cloned repository:
 ```shell
