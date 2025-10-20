@@ -6,7 +6,7 @@ def rgb(text, r, g, b):
     return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
 # Не редактировать/Do not edit
 user = os.getlogin()
-autologin = "34c\ExecStart=-/sbin/agetty --noreset --autologin " + {user} + " --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - ${TERM}"
+autologin = "34c\ExecStart=-/sbin/agetty --noreset --autologin " + user + " --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - ${TERM}"
 start = rgb("Press ", 205, 214, 244) + rgb("ENTER", 116, 199, 236) + rgb(" to start.", 205, 214, 244)
 base = ""
 aur = ""
@@ -36,7 +36,12 @@ And to not spend like a hour on it
 print(start)
 getpass(prompt="")
 
-os.system("sh ./assets/bin/chaotic-install.sh")
+os.system("sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com")
+os.system("sudo pacman-key --lsign-key 3056513887B78AEB")
+os.system("sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'")
+os.system("sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'")
+os.system("echo '[chaotic-aur] \nInclude = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf >> /dev/null")
+os.system("sudo pacman -Sy")
 
 for i in pkgs.BASE:
     base += i + " "
