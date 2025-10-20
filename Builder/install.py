@@ -5,6 +5,7 @@ from getpass import getpass
 def rgb(text, r, g, b):
     return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
 # Не редактировать/Do not edit
+user = os.getlogin()
 start = rgb("Press ", 205, 214, 244) + rgb("ENTER", 116, 199, 236) + rgb(" to start.", 205, 214, 244)
 base = ""
 aur = ""
@@ -62,3 +63,38 @@ Lets begin installation
 print(start)
 getpass(prompt="")
 
+os.system("mkdir -p ~/.config/")
+os.system("mkdir -p ~/bin")
+os.system("mkdir -p ~/Images/Wallpapers/")
+os.system("mkdir -p ~/Images/Screenshots/")
+os.system("mkdir -p ~/Videos/obs/")
+os.system("mkdir ~/.themes")
+os.system("mkdir ~/.icons")
+
+os.system("cp ../Сonfig/* ~/.config/ -r")
+os.system("cp ../Bin/* ~/bin/ -r")
+os.system("cp ../Images/Wallpapers/* ~/Images/Wallpapers/ -r")
+os.system("cp ../Icons/* ~/.icons/ -r")
+os.system("cp ../Themes/* ~/.themes/ -r")
+os.system("cp ../Shell/* ~/ -r")
+
+os.system("clear")
+
+print(rgb(veritas, 116, 199, 236))
+
+print(rgb("""All configuration files installed
+Now we need to setup autologin.
+""", 205, 214, 244))
+print(start)
+getpass(prompt="")
+
+os.system(f"sudo sed -i '34c\ExecStart=-/sbin/agetty --noreset --autologin {user} --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - ${TERM}' /etc/systemd/system/getty.target.wants/getty@tty1.service")
+
+os.system("clear")
+
+print(rgb(veritas, 116, 199, 236))
+
+print(rgb("""Everything is installed, now you can reboot""", 205, 214, 244))
+print(start)
+getpass(prompt="")
+os.system("reboot")
