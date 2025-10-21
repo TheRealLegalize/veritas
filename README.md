@@ -34,6 +34,8 @@ Move to cloned repository:
 ```shell
 cd veritas
 ```
+
+# Note: At now, automatic installation is broken, run installpkgs instead of install, and copy all files manually, you can see paths in the end of install.py
 and execute
 ```shell
 python Builder/install.py
