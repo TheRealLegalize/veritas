@@ -78,12 +78,12 @@ os.mdkir("$HOME/Videos/obs/", exist_ok=True)
 os.mdkir("$HOME/.themes/", exist_ok=True)
 os.mdkir("$HOME/.icons", exist_ok=True)
 
-os.system("cp ../Сonfig/* ~/.config/ -r")
-os.system("cp ../Bin/* ~/bin/ -r")
-os.system("cp ../Images/Wallpapers/* ~/Images/Wallpapers/ -r")
-os.system("cp ../Icons/* ~/.icons/ -r")
-os.system("cp ../Themes/* ~/.themes/ -r")
-os.system("cp ../Shell/* ~/ -r")
+os.system("cp $HOME/veritas/Сonfig/* ~/.config/ -r")
+os.system("cp $HOME/veritas/Bin/* ~/bin/ -r")
+os.system("cp $HOME/veritas/Images/Wallpapers/* ~/Images/Wallpapers/ -r")
+os.system("cp $HOME/veritas/Icons/* ~/.icons/ -r")
+os.system("cp $HOME/veritas/Themes/* ~/.themes/ -r")
+os.system("cp $HOME/veritas/Shell/* ~/ -r")
 
 os.system("clear")
 
