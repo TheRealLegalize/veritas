@@ -69,13 +69,14 @@ Lets begin installation
 print(start)
 getpass(prompt="")
 
-os.system("mkdir -p ~/.config/")
-os.system("mkdir -p ~/bin")
-os.system("mkdir -p ~/Images/Wallpapers/")
-os.system("mkdir -p ~/Images/Screenshots/")
-os.system("mkdir -p ~/Videos/obs/")
-os.system("mkdir ~/.themes")
-os.system("mkdir ~/.icons")
+
+os.mdkir("$HOME/.config/", exist_ok=True)
+os.mdkir("$HOME/bin/", exist_ok=True)
+os.mdkir("$HOME/Images/Wallpapers/", exist_ok=True)
+os.mdkir("$HOME/Images/Screenshots/", exist_ok=True)
+os.mdkir("$HOME/Videos/obs/", exist_ok=True)
+os.mdkir("$HOME/.themes/", exist_ok=True)
+os.mdkir("$HOME/.icons", exist_ok=True)
 
 os.system("cp ../Сonfig/* ~/.config/ -r")
 os.system("cp ../Bin/* ~/bin/ -r")
@@ -95,6 +96,7 @@ print(start)
 getpass(prompt="")
 
 os.system(f"sudo sed -i '{autologin}' /etc/systemd/system/getty.target.wants/getty@tty1.service")
+os.system("chsh -u /usr/bin/zsh")
 
 os.system("clear")
 
@@ -103,4 +105,4 @@ print(rgb(veritas, 116, 199, 236))
 print(rgb("""Everything is installed, now you can reboot""", 205, 214, 244))
 print(start)
 getpass(prompt="")
-os.system("reboot")
+# os.system("reboot")

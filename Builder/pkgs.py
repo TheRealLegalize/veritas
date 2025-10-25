@@ -5,11 +5,11 @@ BASE = [
     "pavucontrol", "pipewire", "pipewire-alsa", "pipewire-jack", "pipewire-pulse", "qt5ct",
     "qt6ct", "qt5-wayland", "qt6-wayland", "rofi", "grim", "flameshot", "thunar-archive-plugin",
     "thunar-volman", "ark", "ttf-jetbrains-mono-nerd", "wget", "wl-clipboard", "wlogout", "xdg-desktop-portal-hyprland",
-    "hyprpicker", "wget", "paru", "networkmanager", "libva-intel-driver", "libpulse", "intel-ucode",
+    "hyprpicker", "wget", "paru", "libva-intel-driver", "libpulse", "intel-ucode",
     "imagemagick", "fzf", "flatpak", "cpupower", "bluez", "bluez-utils", "zen-browser-bin", "hyprland",
-    "hyprlock",
+    "hyprlock", "intel-media-sdk", "intel-media-driver", "tmux", "ayugram-desktop-git", "gum"
 ]
 
 AUR = [
-    "cmatrix-git", "pipes-rs", "cbonsai", "btop-git", "pyinstaller"
+    "cmatrix-git", "pipes-rs", "cbonsai", "btop-git", "pyinstaller", "oh-my-posh"
 ]
