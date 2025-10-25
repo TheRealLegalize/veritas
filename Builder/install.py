@@ -70,13 +70,13 @@ print(start)
 getpass(prompt="")
 
 
-os.mdkir("$HOME/.config/", exist_ok=True)
-os.mdkir("$HOME/bin/", exist_ok=True)
-os.mdkir("$HOME/Images/Wallpapers/", exist_ok=True)
-os.mdkir("$HOME/Images/Screenshots/", exist_ok=True)
-os.mdkir("$HOME/Videos/obs/", exist_ok=True)
-os.mdkir("$HOME/.themes/", exist_ok=True)
-os.mdkir("$HOME/.icons", exist_ok=True)
+os.makedirs("$HOME/.config/", exist_ok=True)
+os.makedirs("$HOME/bin/", exist_ok=True)
+os.makedirs("$HOME/Images/Wallpapers/", exist_ok=True)
+os.makedirs("$HOME/Images/Screenshots/", exist_ok=True)
+os.makedirs("$HOME/Videos/obs/", exist_ok=True)
+os.makedirs("$HOME/.themes/", exist_ok=True)
+os.makedirs("$HOME/.icons", exist_ok=True)
 
 os.system("cp $HOME/veritas/Сonfig/* ~/.config/ -r")
 os.system("cp $HOME/veritas/Bin/* ~/bin/ -r")
@@ -90,12 +90,12 @@ os.system("clear")
 print(rgb(veritas, 116, 199, 236))
 
 print(rgb("""All configuration files installed
-Now we need to setup autologin.
+Now we need to change shell to zsh.
 """, 205, 214, 244))
 print(start)
 getpass(prompt="")
-
-os.system(f"sudo sed -i '{autologin}' /etc/systemd/system/getty.target.wants/getty@tty1.service")
+#
+# os.system(f"sudo sed -i '{autologin}' /etc/systemd/system/getty.target.wants/getty@tty1.service")
 os.system("chsh -u /usr/bin/zsh")
 
 os.system("clear")
@@ -105,4 +105,4 @@ print(rgb(veritas, 116, 199, 236))
 print(rgb("""Everything is installed, now you can reboot""", 205, 214, 244))
 print(start)
 getpass(prompt="")
-# os.system("reboot")
+os.system("reboot")
