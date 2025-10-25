@@ -1,0 +1,195 @@
+/* Catppuccin Mocha colors */
+@define-color rosewater         #f5e0dc;
+@define-color flamingo          #f2cdcd;
+@define-color pink              #f5c2e7;
+@define-color mauve             #cba6f7;
+@define-color red               #f38ba8;
+@define-color maroon            #eba0ac;
+@define-color peach             #fab387;
+@define-color yellow            #f9e2af;
+@define-color green             #a6e3a1;
+@define-color teal              #94e2d5;
+@define-color sky               #89dceb;
+@define-color sapphire          #74c7ec;
+@define-color blue              #89b4fa;
+@define-color lavender          #b4befe;
+@define-color text              #cdd6f4;
+@define-color base              #1e1e2e;
+@define-color mantle            #181825;
+@define-color crust             #11111b;
+@define-color surface0          #313244;
+@define-color surface1          #45475a;
+@define-color surface2          #585b70;
+@define-color overlay0          #6c7086;
+@define-color overlay1          #7f849c;
+@define-color overlay2          #9399b2;
+@define-color subtext0          #a6adc8;
+@define-color subtext1          #bac2de;
+
+/* Global styles */
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14pt;
+    min-height: 0;
+    transition: none;
+}
+
+
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+
+tooltip {
+    border: 2px solid @sapphire;
+    border-radius: 0;
+    background: @mantle;
+}
+
+/*
+#############
+### Right ###
+#############
+*/
+
+#workspaces {
+    background: @base;
+    border-radius: 15;
+    padding-left: 5;
+    padding-right: 9;
+    border: 2pt solid @sapphire;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: @text;
+}
+
+#workspaces button.active {
+    color: @sapphire;
+/*    border-bottom: 2px solid @blue; */
+}
+
+/*
+##############
+### Center ###
+##############
+*/
+#cpu {
+    border-radius: 15px 0 0 15px;
+    border: 2pt solid @sapphire;
+    border-right: none;
+    padding: 0 5px;
+    padding-left: 10;
+    background: @base;
+    color: @red;
+}
+
+#clock {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    padding: 0 5px;
+    background: @base;
+    color: @rosewater;
+}
+
+#memory {
+    border-radius: 0 15px 15px 0;
+    border: 2pt solid @sapphire;
+    border-left: none;
+    padding: 0 5px;
+    padding-right: 10px;
+    background: @base;
+    color: @sapphire;
+}
+
+/*
+#############
+### Right ###
+#############
+*/
+
+#custom-colorpicker {
+    border-radius: 15px 0 0 15px;
+    border: 2pt solid @sapphire;
+    border-right: none;
+    background: @base;
+    padding-left: 8px;
+    padding-right: 10px;
+    color: @teal;
+}
+
+#network {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
+    color: @blue;
+}
+
+#backlight {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
+    color: @yellow;
+}
+
+#pulseaudio {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
+    color: @green;
+}
+
+#battery {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
+    color: @peach;
+}
+
+#language {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
+    color: @sapphire;
+}
+
+#tray {
+    border: 2pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
+}
+
+#custom-powermenu {
+    border: 2pt solid @sapphire;
+    border-radius: 0 15px 15px 0;
+    border-left: none;
+    background: @base;
+    padding-right: 15px;
+    padding-left: 5px;
+    margin: 0 0px 0 0px;
+    color: @red;
+}
+
+#tray menu {
+    background: @mantle;
+    color: @text;
+    border-radius: 0;
+    border: 2px solid @sapphire;
+}

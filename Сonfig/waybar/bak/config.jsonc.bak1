@@ -1,0 +1,118 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 0,
+    "margin": "10 5",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["cpu", "clock", "memory"],
+    "modules-right": ["custom/colorpicker", "network", "backlight", "pulseaudio", "battery", "hyprland/language", "tray", "custom/powermenu"],
+
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "format-icons": {
+           // "active": "",
+            "default": "?",
+/*            "1": "",
+            "2": "󰈹",
+            "3": "",
+	        "4": "",
+	        "5": "󰎆",
+	        "6": "󰸻" */
+	        "1": "一",
+            "2": "二",
+            "3": "三",
+	        "4": "四",
+	        "5": "五",
+	        "6": "六"
+
+        },
+        "persistent-workspaces": {
+            "*": 1,
+            "*": 2,
+            "*": 3,
+            "*": 4,
+            "*": 5,
+            "*": 6
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d}",
+        "interval": 60
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false,
+        "interval": 1
+    },
+
+    "memory": {
+        "format": " {used:0.1f}GiB",
+        "tooltip": false,
+        "interval": 1
+    },
+
+
+    "custom/colorpicker": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "hyprpicker | wl-copy" 
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-disconnected": "󰖪 Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 5,
+        "on-click-right": "nm-applet"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", ""],
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}{capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip": false
+    },
+
+    "hyprland/language": {
+        "format": " 󰌌 {short}",
+        "tooltip": false
+    },
+
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    }
+}
