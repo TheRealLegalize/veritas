@@ -70,20 +70,20 @@ print(start)
 getpass(prompt="")
 
 
-os.makedirs("$HOME/.config/", exist_ok=True)
-os.makedirs("$HOME/bin/", exist_ok=True)
-os.makedirs("$HOME/Images/Wallpapers/", exist_ok=True)
-os.makedirs("$HOME/Images/Screenshots/", exist_ok=True)
-os.makedirs("$HOME/Videos/obs/", exist_ok=True)
-os.makedirs("$HOME/.themes/", exist_ok=True)
-os.makedirs("$HOME/.icons", exist_ok=True)
+os.system("mkdir -p $HOME/.config/")
+os.system("mkdir -p $HOME/bin/")
+os.system("mkdir -p $HOME/Images/Wallpapers/")
+os.system("mkdir -p $HOME/Images/Screenshots/")
+os.system("mkdir -p $HOME/Videos/obs/")
+os.system("mkdir -p $HOME/.themes/")
+os.system("mkdir -p $HOME/.icons")
 
 os.system("cp $HOME/veritas/Сonfig/* $HOME/.config/ -r")
 os.system("cp $HOME/veritas/Bin/* $HOME/bin/ -r")
 os.system("cp $HOME/veritas/Images/Wallpapers/* $HOME/Images/Wallpapers/ -r")
 os.system("cp $HOME/veritas/Icons/* $HOME/.icons/ -r")
 os.system("cp $HOME/veritas/Themes/* $HOME/.themes/ -r")
-os.system("cp $HOME/veritas/Shell/* $HOME -r")
+os.system("cp $HOME/veritas/Shell/* $HOME/ -r")
 
 os.system("sleep 5")
 
