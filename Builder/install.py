@@ -78,12 +78,14 @@ os.makedirs("$HOME/Videos/obs/", exist_ok=True)
 os.makedirs("$HOME/.themes/", exist_ok=True)
 os.makedirs("$HOME/.icons", exist_ok=True)
 
-os.system("cp $HOME/veritas/Сonfig/* ~/.config/ -r")
-os.system("cp $HOME/veritas/Bin/* ~/bin/ -r")
-os.system("cp $HOME/veritas/Images/Wallpapers/* ~/Images/Wallpapers/ -r")
-os.system("cp $HOME/veritas/Icons/* ~/.icons/ -r")
-os.system("cp $HOME/veritas/Themes/* ~/.themes/ -r")
-os.system("cp $HOME/veritas/Shell/* ~/ -r")
+os.system("cp $HOME/veritas/Сonfig/* $HOME/.config/ -r")
+os.system("cp $HOME/veritas/Bin/* $HOME/bin/ -r")
+os.system("cp $HOME/veritas/Images/Wallpapers/* $HOME/Images/Wallpapers/ -r")
+os.system("cp $HOME/veritas/Icons/* $HOME/.icons/ -r")
+os.system("cp $HOME/veritas/Themes/* $HOME/.themes/ -r")
+os.system("cp $HOME/veritas/Shell/* $HOME -r")
+
+os.system("sleep 5")
 
 os.system("clear")
 
