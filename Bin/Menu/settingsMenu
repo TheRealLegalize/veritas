@@ -1,8 +1,11 @@
 #!/bin/sh 
 
-choice=$(printf " Hyprland\n󱔓 Waybar" | rofi -dmenu -p "")
+choice=$(printf " Back\n Hyprland\n󱔓 Waybar" | rofi -dmenu -p "")
 
 case "$choice" in
+    " Back")
+        sh ~/bin/Menu/mainMenu
+        ;;
     " Hyprland")
         sh ~/bin/Menu/settingsMenuHyprland
         ;;

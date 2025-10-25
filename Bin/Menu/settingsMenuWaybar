@@ -1,8 +1,11 @@
 #!/bin/sh 
 
-choice=$(printf " Config\n Style" | rofi -dmenu -p "")
+choice=$(printf " Back\n Config\n Style" | rofi -dmenu -p "")
 
 case "$choice" in
+    " Back")
+        sh ~/bin/Menu/settingsMenu
+        ;;
     " Config")
         kitty -e nvim ~/.config/waybar/config.jsonc
         ;;

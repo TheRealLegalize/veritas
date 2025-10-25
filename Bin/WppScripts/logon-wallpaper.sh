@@ -1,8 +1,8 @@
 #!/bin/sh 
 
-wallpapers=4.png
+wallpapers=/home/user/Images/Wallpapers/4.png
 
 sleep 0.3
-hyprctl hyprpaper preload "$HOME/Images/Wallpapers/$wallpapers" # > /dev/null
-hyprctl hyprpaper wallpaper ",$HOME/Images/Wallpapers/$wallpapers" # > /dev/null
+hyprctl hyprpaper preload "$wallpapers" # > /dev/null
+hyprctl hyprpaper wallpaper ",$wallpapers" # > /dev/null
 #echo $wallpapers

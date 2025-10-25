@@ -1,8 +1,11 @@
 #!/bin/sh 
 
-choice=$(printf " Autostart\n󰌌 Bindings\n Environment\n󰍽 Input\n󰍄 Look & Feel\n󰖯 Windowrules\n Vars" | rofi -dmenu -p "")
+choice=$(printf " Back\n Autostart\n󰌌 Bindings\n Environment\n󰍽 Input\n󰍄 Look & Feel\n󰖯 Windowrules\n Vars" | rofi -dmenu -p "")
 
 case "$choice" in
+    " Back")
+        sh ~/bin/Menu/settingsMenu
+        ;;
     " Autostart")
         kitty -e nvim ~/.config/hypr/conf/autostart.conf
         ;;

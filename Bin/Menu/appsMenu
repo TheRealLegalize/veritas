@@ -1,10 +1,16 @@
 #!/bin/sh 
 
-choice=$(printf "󰏕 Install\n󰏔 Uninstall\n󰏓 Purge" | rofi -dmenu -p "")
+choice=$(printf " Back\n󰏕 Install\n󰏕 AUR Install\n󰏔 Uninstall\n󰏓 Purge" | rofi -dmenu -p "")
 
 case "$choice" in
+    " Back")
+        sh ~/bin/Menu/mainMenu
+        ;;
     "󰏕 Install")
         kitty -T "floatterminal" -e sh ~/bin/Menu/pkgInstall
+        ;;
+    "󰏕 AUR Install")
+        kitty -T "floatterminal" -e sh ~/bin/Menu/pkgInstallAur
         ;;
     "󰏔 Uninstall")
         kitty -T "floatterminal" -e sh ~/bin/Menu/pkgRemove 

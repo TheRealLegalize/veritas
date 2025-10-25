@@ -18,7 +18,7 @@ alias zr="source ~/.zshrc"
 alias ytmp3="yt-dlp -x --audio-format mp3 --cookies-from-browser=firefox "
 alias ytmp4="yt-dlp -f bestvideo+bestaudio --merge-output-format mp4 --cookies-from-browser=firefox"
 
-alias fetch="clear;fastfetch"
+alias fetch="fastfetch"
 
 alias cr="cargo run"
 alias cb="cargo build"
@@ -48,6 +48,8 @@ alias cn="cargo new"
 --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
+
+ export LS_COLORS="di=38;2;116;199;236:ln=38;2;137;180;250:ex=38;2;166;227;161"
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
@@ -96,14 +98,16 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+tput cuu 1 && tput ed
+
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/veritas.toml)"
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ################
 ### KEYBINDS ###
 ################
 
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+# bindkey -e
 
 ###############
 ### HISTORY ###
@@ -128,5 +132,14 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+# fast-theme XDG:catppuccin-mocha
 
+    # tput cuu 1 && tput ed
 
+if [ "$(tty)" = "/dev/tty1" ];then
+  exec Hyprland
+fi
+
+# if [[ -z "$TMUX" ]]; then
+#     tmux attach-session -t 0 || tmux new-session -s 0
+# fi

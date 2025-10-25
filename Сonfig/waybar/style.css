@@ -29,15 +29,16 @@
 /* Global styles */
 * {
     border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14pt;
     min-height: 0;
     transition: none;
 }
 
+
+
 window#waybar {
-    background: @mantle;
+    background: transparent;
     color: @text;
 }
 
@@ -45,6 +46,20 @@ tooltip {
     border: 2px solid @sapphire;
     border-radius: 0;
     background: @mantle;
+}
+
+/*
+#############
+### Right ###
+#############
+*/
+
+#workspaces {
+    background: @base;
+    border-radius: 15;
+    padding-left: 5;
+    padding-right: 9;
+    border: 0pt solid @sapphire;
 }
 
 #workspaces button {
@@ -55,64 +70,142 @@ tooltip {
 
 #workspaces button.active {
     color: @sapphire;
-    border-bottom: 2px solid @sapphire;
+/*    border-bottom: 2px solid @blue; */
 }
 
-#clock {
-    padding: 0 5px;
-    color: @rosewater;
-}
-
+/*
+##############
+### Center ###
+##############
+*/
 #cpu {
+    border-radius: 15px 0 0 15px;
+    border: 0pt solid @sapphire;
+    border-right: none;
     padding: 0 5px;
+    padding-left: 10;
+    background: @base;
     color: @red;
 }
 
-#memory {
+#temperature {
+    border: 0pt solid @sapphire;
+    border-right: none;
+    border-left: none;
     padding: 0 5px;
-    color: @sapphire;
+    background: @base;
+    color: @mauve;
+}
+
+#temperature.warning {
+    border: 0pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    padding: 0 5px;
+    background: @base;
+    color: @red;
 }
 
 
+#clock {
+    border: 0pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    padding: 0 5px;
+    background: @base;
+    color: @blue;
+}
+
+#memory {
+    border-radius: 0 15px 15px 0;
+    border: 0pt solid @sapphire;
+    border-left: none;
+    padding: 0 5px;
+    padding-right: 10px;
+    background: @base;
+    color: @sapphire;
+}
+
+/*
+#############
+### Right ###
+#############
+*/
+
 #custom-colorpicker {
-    padding: 0 0px 0 0;
-    margin: 0px 10px 0px 0px;
+    border-radius: 15px 0 0 15px;
+    border: 0pt solid @sapphire;
+    border-right: none;
+    background: @base;
+    padding: 0 8pt 0 10pt;
     color: @teal;
 }
 
 #network {
-    padding: 0 5px;
+    border-radius: 0 15px 15px 0;
+    border: 0pt solid @sapphire;
+    border-left: none;
+    background: @base;
+    padding: 0 10pt 0 5pt;
+    margin: 0 10px 0 0;
     color: @blue;
 }
 
+
 #backlight {
-    padding: 0 5px;
+    border-radius: 15px 0 0 15px;
+    border: 0pt solid @sapphire;
+    border-right: none;
+    background: @base;
+    padding: 0 10px 0 10px;
     color: @yellow;
 }
 
 #pulseaudio {
+    border: 0pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
     padding: 0 5px;
     color: @green;
 }
 
 #battery {
-    padding: 0 5px;
+    border-radius: 0 15px 15px 0;
+    border: 0pt solid @sapphire;
+    border-left: none;
+    background: @base;
+    padding: 0 8pt 0 10px;
+    margin: 0 10px 0 0;
     color: @peach;
 }
 
 #language {
-    padding: 0 5px;
+    border-radius: 15px 0 0 15px;
+    border: 0pt solid @sapphire;
+    border-right: none;
+    background: @base;
+    padding: 0 5px 0 10px;
     color: @sapphire;
 }
 
-#custom-powermenu {
-    padding: 0 12px 0 2px;
-    margin: 0 0px 0 5px;
-    color: @red;
+#tray {
+    border: 0pt solid @sapphire;
+    border-right: none;
+    border-left: none;
+    background: @base;
+    padding: 0 5px;
 }
 
-#tray {
-    padding: 0 5px;
+#custom-powermenu {
+    border: 0pt solid @sapphire;
+    border-radius: 0 15px 15px 0;
+    border-left: none;
+    background: @base;
+    padding-right: 15px;
+    padding-left: 5px;
+    margin: 0 0px 0 0px;
+    color: @red;
 }
 
 #tray menu {
